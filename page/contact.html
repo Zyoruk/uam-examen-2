@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto | Keshet</title>
+        <script src="../js/component-loader.js" defer></script>
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/contact.css">
+        <link rel="stylesheet"
+            href="../vendor/font-awesome/css/font-awesome.min.css">
+        <script defer src="https://www.google.com/recaptcha/api.js"></script>
+        <script>
+            function onSubmit(token) {
+              document.getElementById("contact").submit();
+            }
+        </script>
+    </head>
+    <body>
+        <section id="header"></section>
+        <section id="contact-form" class="container">
+            <h1>Contacto</h1>
+            <span class="separator"></span>
+            <form action="#" method="post" id="contact">
+                <div class="form--item">
+                    <label for="name" class="required-indicator">nombre</label>
+                    <input id="name" type="name" required placeholder="Nombre completo como aparece es su cédula">
+                    <div class="error">
+                        Este campo es requerido.
+                    </div>
+                </div>
+                <div class="form--item">
+                    <label for="mail" class="required-indicator">correo</label>
+                    <input id="mail" type="email" required placeholder="ejemplo@abc.com">
+                    <div class="error">
+                        Este campo es requerido.
+                    </div>
+                </div>
+                <div class="form--item">
+                    <label for="message" class="required-indicator">mensaje</label>
+                    <details>
+                        <summary>Pedidos</summary>
+                        <p>Gracias por su interés! Al enviar este formulario le estaremos contactando en 24h. Para nosotros es un privilegio atenderle!</p>
+                    </details>
+                    <details>
+                        <summary>Reclamos</summary>
+                        <p>En caso de tener un problema, favor descríbalo. Se le estará contactando para coordinar.</p>
+                        Recuerde:
+                        <ul>
+                            <li>De ser que el producto se le dañó por mal uso no se hará cambios</li>
+                            <li>Deben venir todas las piezas; si algo falta se le contactará</li>
+                            <li>Ofrecemos servicio de reparación</li>
+                        </ul>
+                    </details>
+                    <textarea id="message" required></textarea>
+                    <div class="error">
+                        Este campo es requerido.
+                    </div>
+                </div>
+                <div class="submit-container">
+                    <input type="submit" value="enviar" 
+                        class="g-recaptcha" 
+                        data-sitekey="6LeTzU0eAAAAADEXTKGgy7N2gQiBLG6_0k1dTgGt" 
+                        data-callback='onSubmit' 
+                        data-action='submit'>
+                </div>
+               
+            </form>
+        </section>
+        <section id="footer"></section>
+    </body>
+</html>

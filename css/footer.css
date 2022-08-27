@@ -1,0 +1,25 @@
+@import url("./constants.css");
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 80px 0;
+}
+
+footer > nav { 
+    display: flex;
+    flex-direction: column;
+}
+
+footer > nav li a{ 
+    text-decoration: none;
+    line-height: 30px;
+}
+footer h3, footer a { 
+    color: var(--gray-dark);
+}
+footer .social, footer p { 
+    text-align: right;
+}
+footer .social a { 
+    margin-right: 18px;
+}

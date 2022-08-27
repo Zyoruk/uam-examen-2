@@ -1,0 +1,62 @@
+#products {
+    display: flex;
+}
+
+#products > aside#filters { 
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 25%;
+    padding: 20px;
+}
+
+#products .card--container { 
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#precios .card--container { 
+    margin: 0;
+}
+
+#filters .separator { 
+    width: 55px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#filters h4  {
+    margin-bottom: 5px;
+}
+
+#filters {
+    border-right: solid 1px rgba(1, 1, 1, 0.137);
+}
+
+#filters .accordion-content { 
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+    max-height: 100%;
+}
+#results { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-left: 5vw;
+    padding-right: 5vw;;
+}
+
+.products > #results { 
+    flex: 1 1 75%;
+}
+
+h5.accordion:after{
+    content: url("../images/chevron.svg");
+    position: absolute;
+    transition: transform 300ms;
+}
+
+h5.accordion.closed:after { 
+    transform: rotate(180deg);
+}

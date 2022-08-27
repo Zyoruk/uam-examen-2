@@ -1,0 +1,42 @@
+@import url("./constants.css");
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px 0 0;
+    background-color: var(--white);
+}
+
+header > img { 
+    flex: 1 1 100%;
+}
+
+header > nav { 
+    margin: 50px auto 25px;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+nav > .nav--link { 
+    position: relative;
+    text-decoration: none;
+    color: var(--gray-dark);
+    width: 150px;
+    text-align: center;
+}
+
+nav > .nav--link::after { 
+    border-top: 2px solid var(--red);
+    content: "";
+    position: absolute;
+      right: 100%;
+      bottom: -5px;
+      left: 0;
+    transition: right .6s cubic-bezier(0, .5, 0, 1);
+}
+
+a:hover:after {
+    right: 0;
+}
